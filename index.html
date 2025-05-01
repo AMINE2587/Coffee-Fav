@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffe Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icons/coffee.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img width="35px" src="coffee-cup.png" alt=""></li>
+            </ul>
+            <ul class="nav-bar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <ul>
+                <img width="40px" alt="">
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="card" style="display: none;"  class="Coffe">
+              <div class="card-container">
+                <h2>CARD</h2>
+                <div class="img-info">
+                    <div class="info">
+                        <p>Full Name : <span id="full-name-data" style="font-size: 15px;"></span></p>
+                        <p>Numbers Of Coffe : <span id="number-coffe-data" style="font-size: 15px;"></span></p>
+                        <p>Fav Coffe : <span id="fav-coffe-data" style="font-size: 15px;"></span></p>
+                    </div>
+                    <div class="img">
+                        <img id="image" width="80px" src="amine pro photo (2).png" alt="">
+                    </div>
+                    
+                </div>
+                <div class="coffe-img-card">
+                        <img width="100px" src="coffee-cup.png" alt="">
+                    </div>
+                <div class="description">
+                        <p>this coffe is ...................</p>
+                    </div>
+                <div class="reset-btn">
+                    <button type="reset">Restart The Expérience</button>
+                </div>
+
+
+              </div>
+        </section>
+        <section id="chose-display" style="display: none;"  class="coffe-chosing">
+            <div>
+                <button id="btn-chose">The Coffe For You</button>
+                <span>Click</span>
+            </div>
+        </section>
+       <section  id="quiz">
+            <div class="user-info">
+                <h2>For Best Expérience</h2>
+                <div class="inp">
+                    <input id="name" placeholder="Full Name" type="text">
+                </div>
+                <div class="inp">
+                    <input id="number-coffe" placeholder="Number Coffe Drinks In day" type="number">
+                </div>
+                <div class="inp">
+                    <input id="fav-coffe" placeholder="Your Fav Coffe" type="text">
+                </div>
+                <div class="phot-upload">
+                    <label for="upload-photo">Photo</label>
+                    <input style="display: none;" id="upload-photo" type="file">
+                    <span style="font-size: 10px; display: none;">Your Photo Is Upload</span>
+                </div>
+                <div class="enter-btn">
+                    <button id="btn-enter">Enter</button>
+                </div>
+            </div>
+       </section>
+       
+      
+    </main>
+    <footer>
+        <section class="contact" id="contact">
+                 <a target="_blank" href="https://github.com/AMINE2587"><img width="30px" src="icons/github-sign.png" alt=""></a>
+                 <a target="_blank" href="https://www.linkedin.com/in/mohammed-amine-el-barnoussi-094a832a6/"><img width="30px" src="icons/linkedin.png" alt=""></a>
+                 <a target="_blank" href="https://x.com/AmineFiska20752"><img width="30px" src="icons/twitter.png" alt=""></a>     
+       </section>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

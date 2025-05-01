@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+body{
+    height: 100vh;
+    color: white;
+    background: linear-gradient(to right, #dcc3af,#99765e, #684e38, #3e2917);
+    background: url(backgound/two.png);
+    background-size: cover;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav ul{
+    margin: 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+header nav ul li{
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul li a{
+    text-decoration: none;
+}
+header nav ul li img{
+    cursor: pointer;
+}
+.nav-bar{
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 10px;
+    border: 1.5px solid white;
+}
+.nav-bar li a{
+    background: none;
+    transition: color 0.3s ease-in-out, transform 0.4s ease-in-out;
+}
+.nav-bar li a:hover{
+    color: #dcc3af;
+    transform: translateY(-1.5px);
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+.user-info{
+    width: 520px;
+    height: 350px;
+    background: rgba(62, 41, 23, 0.408);
+    backdrop-filter: blur(5px);
+    box-shadow: #21170d 20px 10px 100px 20px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid white;
+}
+.user-info h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-info .inp{
+    padding: 5px;
+    margin: 5px 5px;
+}
+.user-info .inp input{
+    width: 95%;
+    padding: 8px;
+    border-radius: 10px;
+    background: rgba(62, 41, 23, 0.626);
+    backdrop-filter: blur(15px);
+    margin: 5px ;
+    background: #99765e;
+    border: 1.5px #99765e solid;
+    transition: border 0.3s ease-in-out;
+}
+.user-info .inp input::placeholder{
+    color: white;
+}
+.user-info .inp input:focus{
+    outline: none;
+    border: 1.5px solid white;
+}
+.phot-upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px ;
+    margin: auto;
+    margin-top: 15px;
+    border: 1.5px solid white;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.4s ease-in-out;
+}
+.phot-upload:hover{
+    background-color: white;
+    color: #291c10;
+}
+.phot-upload label{
+    color: white;
+    transition: color  0.3s ease-in-out;
+}
+.phot-upload label:hover{
+    color: #291c10;
+    cursor: pointer;
+}
+.enter-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 13px;
+}
+.enter-btn button{
+    width: 40%;
+    padding: 6.5px;
+    color: #21170d;
+    background: #dcc3af;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.4s ease-in-out;
+}
+.enter-btn button:hover{
+    background: #a57544;
+    transform: scale(1.05);
+}
+footer{
+    height: 10vh;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.contact a{
+    transition: transform 0.3s ease-in-out;
+    margin-top: 20px;
+}
+.contact a:hover{
+    transform: translateY(-1.5px);
+}
+.coffe-chosing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 90%;
+    transition: display 0.5s ease-in-out;
+}
+.coffe-chosing div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 200px;
+}
+.coffe-chosing div button{
+    padding: 20px;
+    font-size: 25px;
+    background: rgba(61, 43, 25, 0.668);
+    backdrop-filter: blur(15px);
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    width: 350px;
+    border: 1px solid white;
+    transition: transform 0.4s ease-in-out;
+    animation-name: btn-moving;
+    animation-duration: 4s;
+    animation-iteration-count: inherit;
+    animation-direction: alternate-reverse;
+}
+@keyframes btn-moving{
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.coffe-chosing div button:hover{
+    transform: scale(1.08);
+}
+.coffe-chosing div span{
+    margin-top: 10px;
+}
+.Coffe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+.card-container{
+    background-color: #744d2b27;
+    backdrop-filter: blur(15px);
+    padding: 8px;
+    width: 500px;
+    height: 430px;
+    border-radius: 20px;
+    border: 1.5px solid white;
+}
+.card-container h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.img-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-info .img{
+    padding: 5px;
+    margin-right: 50px;
+}
+.img-info .img img{
+    border-radius: 15px;
+}
+.img-info .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 20px;
+}
+.img-info .info p{
+    font-size: 17px;
+}
+.coffe-img-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 150px;
+    margin: auto;
+    border: 1.5px solid white;
+    border-radius: 20px;
+    background: linear-gradient(to right, #684e38, #c9a389);
+}
+.description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.reset-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.reset-btn button{
+    padding: 6.5px;
+    color: #21170d;
+    background: #dcc3af;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.3s ease-in-out, transform 0.4s ease-in-out;
+}
+.reset-btn button:hover{
+    background: #a57544;
+    transform: scale(1.05);
+}
