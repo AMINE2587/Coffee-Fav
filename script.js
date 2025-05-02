@@ -10,33 +10,54 @@ let image = document.getElementById('image');
 let card = document.getElementById('card');
 let choseDisplay = document.getElementById('chose-display');
 let quiz = document.getElementById('quiz');
+let choseBtn = document.getElementById('btn-chose');
 
 
-function setData(){
-    if(fullName.value != '' && numberCoffe.value != '' && favCoffe.value != '' && upload.value != ''){
-        fullNameData.value = fullName.value;
-        numberCoffeData.value = numberCoffe.value;
-        favCoffeData.value = favCoffe.value;
-        quiz.style.display = 'none';
-        card.style.display = 'block'
-        let files = new FileReader();
-        upload.file = files.readAsDataURL;
-        image.files = files.result;
+
+
+upload.onchange = function() {
+    let file = new FileReader();
+    file.readAsDataURL(upload.files[0]);
+    file.onload = function() {
+        image.src = file.result;
+
         let userData = {
             fullname: fullName.value,
-            numbercoffe: numberCoffe.value,
-            favcoffe: favCoffe.value,
-            image: files,
-        }
-        localStorage.setItem('User Data' ,JSON.stringify(userData));
-        let userDataBack = localStorage.getItem(JSON.parse(userData));
-        fullNameData.value = userDataBack.fullname;
-        numberCoffeData.value = numberCoffe.numbercoffe;
-        favCoffeData.value = favCoffe.favcoffe;
+            number: numberCoffe.value,
+            fav: favCoffe.value,
+            upload: file.result
+        };
+        localStorage.setItem('data', JSON.stringify(userData));
+    };
+};
 
+function setData(){
+    if(fullName.value !== '' && numberCoffe.value !== '' && favCoffe.value !== '' && upload.files.length > 0){
+        choseDisplay.style.display = 'flex';
+        quiz.style.display = 'none';
+    } else {
+        alert('please complete the information')
     }
-
 }
+
+function getData(){
+    let user = JSON.parse(localStorage.getItem('data'));
+    if(user){
+        fullNameData.innerHTML = user.fullname;
+        numberCoffeData.innerHTML = user.number;
+        favCoffeData.innerHTML = user.fav;
+        image.src = user.upload;
+        choseDisplay.style.display = 'none';
+        card.style.display = 'flex';
+    } else {
+        alert('no data');
+    }
+}
+
 enterBtn.onclick = function(){
     setData();
-}
+};
+
+choseBtn.onclick = function(){
+    getData();
+};
